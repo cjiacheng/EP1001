@@ -16,28 +16,44 @@
     <div id="container">
         <div class ="sidenav">
         
-           <a href="Intropage.html">Introduction</a>
-            <a href="Eleproduction">Electronics Production</a>
-            <a href="Eledesign">Electronics Design</a>
-        <a href="Embprogramming">Embedded Programming</a>
-           <a href="2DCNC">2D Computer Controlled Cutting</a>
-           <a href="3DCNC">3D Machining</a>
-            <a href="MoldCast">Molding and Casting</a>
-            <a href="Interface"> Programme Interface and Applications</a>
-           <a href="Iot">Internet of Things</a>
-            <a href="Final">Final Project</a>
+       <a href="Intropage.html">Introduction</a>
+            <a href="Eledesign.html">Electronics Design</a>
+            <a href="Eleproduction.html">Electronics Production</a>
+        <a href="Embprogramming.html">Embedded Programming</a>
+           <a href="CNC.html">Computer Controlled Cutting</a>
+            <a href="MoldCast.html">Molding and Casting</a>
+            <a href="Interface.html"> Programme Interface and Applications</a>
+            <a href="Final.html">Final Project</a>
         
             
         
         </div>
     
         <div id="content">
-        <h2>Electronics Production in Further Fab Lab is learning how to <u>Create</u>,<u>Design</u> and <u>Programme</u> our own Printed Circuit Board.</h2>
-        
-        
-        
-        
-        
+        <h2>Electronics in Further Fab Lab is a 3 part process on learning how to <u>Design</u> ,<u>Create</u> and <u>Programme</u> our own Printed Circuit Board.</h2>
+            <p>Electronics production is where we shall dive into the manufacturing process of our own PCB board. We will be learning how to use what we've gotten from Electronics Design and turn them into actual functioning boards.</p>
+         <p> First step of that process would be turning the images that we have into code that the machine is able to read, aka GCODE.</p>
+            <p>To do this, first we have to go to Mods>Programms>Open server programmes> Mill 2D PCB PNG, then insert the traces. Click here to access --> <a href="https://skeatz.github.io/mods/">Mods</a></p>
+            <img src="mods.jpg" width="800" height="400"/>
+        <p>After inserting the appropriate images, we must now set the settings that is appropriate for what we are cutting. For cutting the traces, we will be using a cutting tool of thinner diameter(0.4mm flat end mill/20degree) as compared to the outline(0.8mm flat end mill).So here are the settings for the traces(left) and outline(right).</p>
+            <img src="tracessettings.png"width="600" height="400"/> 
+            <img src="outlinesettings.png"width="600" height="400"/>        
+        <p> After inserting all the dimensions, press calculate to get the NC code to start on your milling process. It is recommended to save the code on your thumbdrive.</p>
+        <p>In the lab, the machine we are using for the milling is the Stepcraft. So the demostration will be a guide on how to use the Stepcraft CNC.</p>
+            <p>When first entering the Stepcraft interface, you will be greeting with a page like this. To give you some basic idea, you will be able to move the machine(X and Y axis) with the arrow keys and up and down with the page up and down. From here on load in your NC code.</p>
+            <img src="stepcraftint.PNG" height="800" height="400"/>
+            <p>Next, we need to set the x,y and z starting positions for the machine. Firstly, get the probe, and place it on the board that you are going to mill. Then, move the machine until the drill bit it right ontop of the probe. Next, click that button and done. Your z-axis has been set.</p>
+            <img src="stepcraftz.PNG"width="800" height="400"/>
+            <p>Next will be the x and y axis.To set the x and y axis, position the machine until a comfortable position at the bottom left of the board you're milling, and select the 2 buttons to set x and y as 0. This will be where your machine starts cutting from.</p>
+            <img src="stepcraftxy.PNG"width="800" height="400"/>
+            <p>After setting the different axis, you're good to go. Turn on the spindle and "Cycle Start". If anything goes wrong, lets say its cutting too shallow or cutting too deep, you can always "Cycle Stop" to pasue the machine.</p>
+            <img src="stepcraftstart.PNG"width="600" height="400"/>
+            <img src="milling.jpg" width="600" height="400"/>
+            <p>After running both your codes and changing the tool in between , thsi is what i ended up with. After getting your milled out board with all the traces, you are recommended to remove all excess traces useing a penknife. This will give you a easier time when soldering later on. When soldering, a general tip would be to tin(apply some solder on the part your are about to solder on) the pads before soldering on your components. This would make connecting the components much easier. Here is my finished product.</p>
+            <img src="milled.jpg"width="600" height="400"/>
+            <img src="soldered.jpg" width="600" height="400"/>
+            
+        <h3>This is the end of Electronics Production.</h3>
         
         
         

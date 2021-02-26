@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Further Fabrication Website
+        
+    </title>
+    <link rel="stylesheet" type="text/css" href="newstyle.css"/>
+    </head>
+<body>
+    
+        
+        <div id="header">
+        <h1> Computer Numerical Control(CNC)</h1>
+        </div>
+    <div id="container">
+        <div class ="sidenav">
+        
+           <a href="Intropage.html">Introduction</a>
+            <a href="Eledesign.html">Electronics Design</a>
+            <a href="Eleproduction.html">Electronics Production</a>
+        <a href="Embprogramming.html">Embedded Programming</a>
+           <a href="CNC.html">Computer Controlled Cutting</a>
+            <a href="MoldCast.html">Molding and Casting</a>
+            <a href="Interface.html"> Programme Interface and Applications</a>
+            <a href="Final.html">Final Project</a>
+        
+            
+        
+        </div>
+    
+        <div id="content">
+        <p>CNC is a subtractive manufacturing process which typically employs computerized controls and machine tools to remove layers of material from a stock piece—known as the blank or workpiece—and produces a custom-designed part. Which in layman terms means the machine cuts layer by layer until it finished the design that you programmed it to cut. In further fabrication lab, we were tasked to CNC many things, but for this demostration, I would like to show the use of Fusion 360 to generate G-Code for my molding and casting. </p>
+        <p> To start of, of course we first need a design, it was recommended to keep the mold's exterior dimensions at 50mmx50mmax20mm. There should be a gap of 3mm from the interior mold to the exterior and a spacing of 5mm from the interior base to the bottom. Now with this restrictions in mind,we are free to design a mold for anything that we want to cast. I chose to design a simple looking small item as I believed it would fit anywhere.</p>
+        <img src="mold.PNG" height="400" width="400"/><img src="moldcross.PNG"width="400" height="400"/>
+        <p> After designing and making sure of no parts un-machinable, we shall now take our design to another function of Fusion 360, Manufacturing.</p>
+        <img src="Manu.jpg"width="600" height="400"/>
+        <p> Inside here, we must follow a planned set of instruction in order to produce the Gcode for our design. Firstly, GO to 3D>Adaptive Cleaning. This will generate your toolpath. Next select the tool that you're using, in this case, we are using the 3mm flat end mill. Next would be the spindle speed, which we will set to 12000rpm. Since this is a very small model, machines rest will be turned off. Laslty would be the Roughing steps and the fine stepdown.</p>
+        <img src="CNC1.jpg"width="600" height="400"/>
+        <img src="CNC2.jpg"width="600" height="400"/>
+        <img src="CNC3.jpg"width="600" height="400"/>
+        <img src="CNC4.jpg"width="600" height="400"/>
+          <img src="CNC5.jpg"width="600" height="400"/>  
+            <p>Now to export our file, we use the pose processor.All we have to do inside is to change the machine Stepcraft UCCNC which the CNC machines in the lab and hit post. This will give us the G code which will allow us to use the machine.</p>
+            <img src="postprocess.PNG"width="600" height="400"/>  
+            <p> Firstly , we prepare the stock, which in this case, we're using styrofoam. To secure it on the board, we double-sided tape the whole entire back and secure it tightly on the board. Next we must draw a cross using line we've drawn from 4 corners of the stock to mark out the centre.</p>
+            <img src="cnctaped.jpg"width="600" height="400"/>  
+            <img src="cncx.jpg"width="600" height="400"/>  
+            <p>Once all of these is done, we can use the Stepcraft machine to set xyz as 0 point at the centre of the cross. Whats different this time compared to setting z 0 while milling the PCB is that you will have to set z as 0 directly in contact with the stock.</p>
+            <img src="cncmilling.jpg"width="600" height="400"/>  
+            <p>During the process of milling, we have to constantly hold a vacuum cleaner at the stock as the dust was flying everywhere. This is the finished product.</p>
+            <img src="cncfinished.jpg"width="600" height="400"/>  
+            <h3>This is the end of CNC. Reference: <a href="http://fabacademy.org/2020/labs/kamplintfort/students/marwa-baalouche/class10.html">here</a></h3>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    </body>
+
+
+
+
+
+</html>

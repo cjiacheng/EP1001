@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Further Fabrication Website
+        
+    </title>
+    <link rel="stylesheet" type="text/css" href="newstyle.css"/>
+    </head>
+<body>
+    
+        
+        <div id="header">
+        <h1> Final Project</h1>
+        </div>
+    <div id="container">
+        <div class ="sidenav">
+        
+           <a href="Intropage.html">Introduction</a>
+            <a href="Eledesign.html">Electronics Design</a>
+            <a href="Eleproduction.html">Electronics Production</a>
+        <a href="Embprogramming.html">Embedded Programming</a>
+           <a href="CNC.html">Computer Controlled Cutting</a>
+            <a href="MoldCast.html">Molding and Casting</a>
+            <a href="Interface.html"> Programme Interface and Applications</a>
+            <a href="Final.html">Final Project</a>
+        
+            
+        
+        </div>
+    
+        <div id="content">
+        <p>Throughout the semester, I didn't really have that much of an idea of what I was gonna make for my final project. I thought of improving my idea from Ep1000, I've thought about another project related to music, but nothing seemed to click. So as I was casually scrolling through news the other day, I saw this news about flooding in India which caught my eye. Because we're living in singapore, we are so called oblivious and unconcerened about natural disasters, but what if one day it actually happens in singapore? With this idea in mind, I started conceptualising about a house that will defend/warn its owners about a flood.</p>
+            <p>With a idea in mind, I started working fast. What features do I want? How would I make the house? After some research, I finalised my ideas.</p>
+        <p>I wanted a house that would react to flooding, by warning its owner that a flooding is occuring through the use of buzzers and LEDs. Not only that, if the owner was outside, the house should also be able to warn the user that a flooding is occuring at their house. SO I wanted to use a bluetooth module to send a message wirelessly. Lastly, I wanted to make the house react to te flood and defend its users against it by elevating the users up, through a lift.</p>
+            <p>Now with the features in mind, I started designing an outer shell for the house, well firstly, I wanted this house to be see through so that I can see the LED and other components from outside.I also wanted the house to be able to be joint on its own without any glue. So I got on to designing.</p>
+            
+         <img src="house.PNG"width="600" height="600"/> <img src="house2.PNG"width="600" height="600"/>
+            <p>The opening at the top is for the lift. The holes in the centre is for wiring and LEDs.</p>
+            <p>After getting the house out, I decided to add some asthetics to this house. So I designed a spiral staircase. </p>
+         <img src="staris.PNG"width="600" height="600"/>
+            <p>Now after having a completed design, I went on to laser cut the house and 3D print the staircase, they came out great. After that was assembly.</p>
+         <img src="Isometric%20View.jpg"width="600" height="600"/> <img src="Side%20view.jpg"width="600" height="600"/>
+        <p>Oh yeah, I also found some really good looking furniture online to add on to my house as it was looking slightly empty.But overall, I was pretty happy with the final looks of the house.</p>
+        <p>Next would be putting in the electronics and programming it. Firstly, I brought all of my components and tested them individually. For my final board, I decided to use my T85 board as I thought that it would be enough as my functions were pretty simple.</p>
+        <p>After testing everything including my full programme on an Arduino Uno board, I decided it was time to transfer it to my T85 board. But here is where the problem starts. Firstly, I didn't have enough pins to accomodate all of my components, not only that, the servo motor which I was going to use required a large amount of current and if I were to use a  current that large, it would certainly fry my bluetooth and other components. So after careful consideration, I decided to ditch the servo. So here is my final circuit.</p>
+         <img src="Circuit%20documented.PNG"width="600" height="600"/>
+        <ul>
+            <b>Components</b>
+            <li>HC-05 BLuetooth</li>
+            <li>BUzzer</li>
+            <li>LED</li>
+            <li>AT TIny85 Board</li>
+            <li>1.1k ohms resistor</li>
+            <li>3.3k ohms resistor</li>
+            <li>Breadboard</li>
+            <li>Water Sensor</li>
+            
+            
+            </ul>
+        <p>Finally, despite trying multiple times, I still couldn't get my bluetooth module to work via the T85 board, I still have no idea why, even after searching up multiple guides on how it works I still couldn't get it working. So in the end, it was a interesting project to make and design, I certainly wish I could have done it better within the given timeframe. But maybe that will be save for during the holidays.</p>
+            <p>Link to<a href="https://drive.google.com/file/d/1GaNpNsGxXzlo3VXmo5SXWlAR9SByVd_U/view?usp=sharing"> code</a>, <a href="https://youtu.be/sD8IxKB6c_M">video</a>, <a href="https://docs.google.com/presentation/d/1LiH1okTN2G-tWYBlmrFFxDMEHQGqbR85Dr29TXnfOEU/edit?usp=sharing">slides</a> and <a href="https://drive.google.com/file/d/1RQCppTLj_CUYrA30daSiFQ9j1DycSIeL/view?usp=sharing">Fusion 360 Model</a>.</p>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    </body>
+
+
+
+
+
+</html>

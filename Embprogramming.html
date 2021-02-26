@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Further Fabrication Website
+        
+    </title>
+    <link rel="stylesheet" type="text/css" href="newstyle.css"/>
+    </head>
+<body>
+    
+        
+        <div id="header">
+        <h1>Embedded Programming(PCB)</h1>
+        </div>
+    <div id="container">
+        <div class ="sidenav">
+        
+           <a href="Intropage.html">Introduction</a>
+            <a href="Eledesign.html">Electronics Design</a>
+            <a href="Eleproduction.html">Electronics Production</a>
+        <a href="Embprogramming.html">Embedded Programming</a>
+           <a href="CNC.html">Computer Controlled Cutting</a>
+            <a href="MoldCast.html">Molding and Casting</a>
+            <a href="Interface.html"> Programme Interface and Applications</a>
+            <a href="Final.html">Final Project</a>
+        
+            
+        
+        </div>
+    
+        <div id="content">
+      
+        <p>In EMbedded Programming, we shall learn how to programme the AT Tiny 85 board that we have made in the previous sections. Since the AT Tiny85 board that we have made is special, we cannot programme it on its own like arduino. As you can see, the baord that we have made has no usb connector, which means it cannot be directly plugged into our laptop/pc for programming. SO, we need an additional component to programme the board, a programmer.</p>
+        <p>There are multiple types of programmers out there, but the ones that we have acess to are the <b>AT Tiny ISP</b> and the numerous types of <b>Arduino Board</b>.</p>
+        <p>For Further Digital Fabrication, we are required to create our own AT Tiny ISP board to programme our AT Tiny85 board. So with the information that we gathered up till now, I created a ATTiny ISP board with the given traces.</p>
+        <img src="ISP_ATtiny.jpg"width="500" height="200"/>
+        <img src="ISP_ATtiny_outline.jpg"width="500"height="200"/>
+        <img src="ISPTINY.jpg"width="200" height="200"/>
+            <p> So now that we have the programmer board, we still cannot start programming yet, this si because although we have soldered on everything, the board does not know what to do and we must first upload commands onto the board so that it will programme the T85 when instructed to.</p>
+        <p>To do that, first we have to download some softwares. To understand the complexity of this step, please refer to this --> 
+            <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html">How to use GNU AVR toolchain on windows</a></p>
+            <p>The link to download Atmel AVR toolchain appears to be bugged, so <a href="https://blog.zakkemble.net/avr-gcc-builds/">here</a> is where I've gotten mine from, courtesy of <b>Zhan Li</b>. If you have done everything correctly, this is what you should see in your Path.</p>
+            <img src="path.PNG"width="600" height="400"/>
+            <p>Next, you will have to make sure your computer recognises your ISP board, to do this, we require a software known as <a href="https://zadig.akeo.ie/">Zadig</a>. Plug in your ISP board and open up zadig,select ISP programmer and download the "libub-win32" driver.</p>
+            <img src="Zadig.jpg"width="600" height="400"/>
+            <p>After doing all of these, we can finally start programming the programmer.Plug in your ISP Board. Firstly, open up Command Prompt and type "cd Documents" followed by "cd fts_firmware_bdm_v1".</p>
+        <img src="pro1.jpg"width="600" height="400"/>
+        <p>Next type "make". Followed by "make flash". You should see you ISP board blinking.</p>
+        <img src="pro2.jpg"width="600" height="400"/>
+        <p>Next, type "make fuses".</p>
+            <img src="pro3.jpg"height="400"width="600"/>
+            <p>Lastly, type"make rstdisbl". This will make your ISP board available for programming.</p>
+            <img src="pro4.jpg"width="600" height="400"/>
+            <p>Now that we've done preping the programmer board, lets prep the board that we're going to programme. The programming of the T85 board can be done through arduino so no additional software is required. Before programming , lets understand the pin layout of the T85 board.</p>
+            <img src="T85pins.PNG"width="1300"height="400"/>
+            <p> Since we are programming on Arduino, we shall look at the Arduino pin to determine the pin number for when we are programming.</p>
+            <p>Before we start, we still have to import a library into Arduino in order for it to recognise our board. As recommended, we will be using SpenceKonde's version .( Link to his github--> <a href="https://github.com/SpenceKonde">here</a>) To import his library into your Arduino, open up Arduino>Files>Preferences>Additional Boards Manager URLs. Enter this URL(http://drazzy.com/package_drazzy.com_index.json) inside and click the button to the side.</p>
+            <img src="ArdPref.jpg"width="600" height="400"/>
+            <p>Next, go to Tools>Boards>Boards Manager and search in the search bar"ATTiny Core by Spence Konde" and install.</p>
+            <img src="ArdDOwn.jpg"width="600" height="400"/>
+            <p>Next, plug in your ISP programmer board connected to your T85 board through a jumper cable and change the settings to as follows. Burn Bootloader. Now we can finally start programming!</p>
+        <img src="ARdtools.PNG"width="600" height="400"/>
+        <p>To test the functionality and to celebrate a little, lets test the basic blink programm on the board. Load in the Arduino example programms and load in the Blink programme.Based on our schematic diagram, our in built LED is located on Arduino Pin 4. SO we need to change the output pin to pin 4. But when we upload our code, we cannot use the normal means of uploading . We must go to Tools>Upload Using Programmer. Lets witness the fruits of our labour.</p>
+            <img src="blinkpro.png" width="400" height="400"/>
+            <img src="upoloadpro.PNG"width="500" height="400"/>
+            <br>
+            <iframe width="420" height="315"
+            src="https://youtu.be/d_bJgNHZ7pccontrols=1">
+            </iframe>
+            <h3>This is the end of the Electronics.<a href="https://youtu.be/d_bJgNHZ7pc"> Link to Blinking LED video.</a></h3>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    </body>
+
+
+
+
+
+</html>
